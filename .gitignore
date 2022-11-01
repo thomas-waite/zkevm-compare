@@ -11,3 +11,5 @@ install-state.gz
 cache
 artifacts
 
+artifacts-zk
+cache-zk
