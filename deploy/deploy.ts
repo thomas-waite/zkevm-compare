@@ -45,12 +45,14 @@ export default async function (hre: HardhatRuntimeEnvironment) {
   // Mint tokens to self
   const mintTx = await token.mint(wallet.address, 1000);
   console.log('Mint tx: ', mintTx.hash);
+  // Mint tx: 0x232cc32004c6c37857bdd316a996bff61ced75dbb367a585237b8dc11ff9c9c3
   await mintTx.wait();
 
   // Send tokens to another user
   const receiver = '0x803554C9cB72227D88B56495D3E92f96aD589B09';
   const transferTx = await token.transfer(receiver, 10);
   console.log('Transfer tx: ', transferTx.hash);
+  // Transfer tx: 0x3caf8e95bc0521debed152f7c727d79c3d4638c310306d4f453a327991f11abc
   await transferTx.wait();
   console.log('Done');
 }

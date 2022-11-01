@@ -10,7 +10,8 @@
 ## Scroll and zkSync
 # Scroll
 Deployed an ERC20Mintable contract here: https://l2scan.scroll.io/address/0xDb88Df5bE6285d2d6f6B4645884C229B73df9799 
-Made a transfer() here: https://l2scan.scroll.io/tx/0xff2487c7528c9ac491a380589c19a4b2ae2f9b918f1b59360bb2950ec77707cb/token-transfers 
+
+Transfer tx: https://l2scan.scroll.io/tx/0xff2487c7528c9ac491a380589c19a4b2ae2f9b918f1b59360bb2950ec77707cb/token-transfers 
 
 1. Execution trace for the transfer transaction
 Hash: 0xff2487c7528c9ac491a380589c19a4b2ae2f9b918f1b59360bb2950ec77707cb 
@@ -47,6 +48,19 @@ Tried pinging their node, it doesn't support the `debug_traceTransaction`. From 
 5. How are reverts handled?
 
 # zkSync
+Solidity code bytecode is compiled down to an intermediate representation. The intermediate representation is SNARK friendly. 
 
+They have written their own virtual machine, which is SNARK-friendly. 
+
+Deployed ERC20Mintable contract, minted and transferred tokens. 
+
+Token address: 0xc46d85433868AdB9d14A369270Be2E4009a5E32C 
+
+Mint tx: 0x232cc32004c6c37857bdd316a996bff61ced75dbb367a585237b8dc11ff9c9c3
+
+Transfer tx: 0x3caf8e95bc0521debed152f7c727d79c3d4638c310306d4f453a327991f11abc
+
+1. The zkSync compiler results in significantly different bytecode for the ERC20Mintable.sol contract: https://www.diffchecker.com/LGtIWQTF 
+2. 
 
 

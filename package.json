@@ -1,8 +1,7 @@
 {
-  "name": "scroll-deploy-contract-demo",
+  "name": "zkevm-compare",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
   "scripts": {
     "compile": "npx hardhat compile",
     "test": "npx hardhat test",
